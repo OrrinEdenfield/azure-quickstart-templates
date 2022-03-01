@@ -17,11 +17,11 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: '<your-resource-manager-connection>'
+    azureResourceManagerConnection: 'OrrinAzureConnection'
     subscriptionId: 'eec574e9-ec83-4c9f-80e5-63e68cf90cf8'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'ARMPipelinesLAMP-rg'
-    location: '<your-closest-location>'
+    location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.json'
     csmParametersFile: '$(Build.ArtifactStagingDirectory)/azuredeploy.parameters.json'
